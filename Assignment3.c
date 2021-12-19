@@ -171,9 +171,9 @@ void AtbashSeq(char Input[],char word[]){
             if(checkAtbash(subtext,word)==1){
             if (seqMone==0)
             { 
-            printf("%s",subtext);
+            printf("%s",strrev(subtext));
             }else{
-              printf("~%s",subtext);
+              printf("~%s",strrev(subtext));
             }
             seqMone+=1;
             break;
