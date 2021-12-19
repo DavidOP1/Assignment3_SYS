@@ -24,7 +24,6 @@ int main(){
      printf("\n");
      printf("Anagram Sequences: ");
      AnagramSeq(Text,word);
-     printf("\n");
 return 0;
 }
 
