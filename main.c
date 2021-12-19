@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #define maxWord 30
 #define Textlen 1024
+int checkWave(char[]);
 int strlength(char s[]);
 int main(){
       char word[Textlen];
@@ -11,9 +12,9 @@ int main(){
      char Input[Textlen];
      //dont forget to free the malloc used 
      fgets(word,maxWord,stdin);  
-     while(Text[strlength(Text)-1]!='~'){
-       strcat(Text," ");
-       fgets(Input,Textlen,stdin);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+     while(checkWave(Input)){
+      // printf("test= %s\n",Text);
+        fgets(Input,Textlen,stdin);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
        strcat(Text,Input);
      }
      printf("Gematria Sequences:");
@@ -26,4 +27,10 @@ int main(){
      AnagramSeq(Text,word);
 return 0;
 }
-
+int checkWave(char input[]){
+  int letter=0;
+   for(int i=0;i<strlength(input);i++){
+     letter=input[i];
+      if(letter==126) return 0;
+   }return 1;
+}
