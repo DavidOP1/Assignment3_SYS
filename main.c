@@ -16,13 +16,13 @@ int main(){
        fgets(Input,Textlen,stdin);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
        strcat(Text,Input);
      }
-     printf("Gematria Sequences: ");
+     printf("Gematria Sequences:");
      GematriaSeq(Text,word);
      printf("\n");
-     printf("Atbash Sequences: ");
+     printf("Atbash Sequences:");
      AtbashSeq(Text,word);
      printf("\n");
-     printf("Anagram Sequences: ");
+     printf("Anagram Sequences:");
      AnagramSeq(Text,word);
 return 0;
 }
