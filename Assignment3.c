@@ -30,6 +30,7 @@ void AnagramSeq(char Input[],char word[]){
             char subtext[j-i+1];
             memcpy(subtext,&Input[i],j-i);
             subtext[j-i]='\0';
+            if(((int)subtext[0]>=65&&(int)subtext[0]<=90)||((int)subtext[0]>=97&&(int)subtext[0]<=122)){
             if(helpAnagram(subtext,word)==1){
             if (seqMone==0)
             { 
@@ -39,6 +40,7 @@ void AnagramSeq(char Input[],char word[]){
             }
             seqMone+=1;
             break;
+            }
             }
          }
          if (letter>=65&&letter<=90)
@@ -57,23 +59,26 @@ void AnagramSeq(char Input[],char word[]){
 }
 int helpAnagram(char s[],char word[]){
   int letter=0,j=0,checkArr=1;
-  int *wordArr=(int*) malloc(sizeof(int)*strlength(word));
-  int *stringArr=(int*) malloc(sizeof(int)*strlength(word));
  for(int i=0;i<strlength(s);i++){
    letter=s[i];
-     if (letter>=65&&letter<=90)
+     if (letter>=21&&letter<=126)
+         {
+           j+=1;
+         }
+ }
+ int *wordArr=(int*) malloc(sizeof(int)*strlength(word));
+  int *stringArr=(int*) malloc(sizeof(int)*j);
+     j=0;
+  for(int i=0;i<strlength(s);i++){
+   letter=s[i];
+     if (letter>=21&&letter<=126)
          {
               wordArr[j]=((int)word[j]);
               stringArr[j]=letter;
               j+=1;
          }
-         if (letter>=97&&letter<=122)
-         {
-              wordArr[j]=((int)word[j]);
-              stringArr[j]=letter;
-              j+=1;
-         }
- }sort(wordArr,strlength(word)); sort(stringArr,strlength(word));
+ }
+ sort(wordArr,strlength(word)); sort(stringArr,strlength(word));
   for(int i=0;i<strlength(word);i++){
      if(wordArr[i]!=stringArr[i])return 0;
   }
@@ -119,6 +124,7 @@ void GematriaSeq(char Input[],char word[]){
             char subtext[j-i+1];
             memcpy(subtext,&Input[i],j-i);
             subtext[j-i]='\0';
+            if(((int)subtext[0]>=65&&(int)subtext[0]<=90)||((int)subtext[0]>=97&&(int)subtext[0]<=122)){
             if (seqMone==0)
             { 
             printf("%s",subtext);
@@ -127,6 +133,7 @@ void GematriaSeq(char Input[],char word[]){
             }
             seqMone+=1;
             break;
+            }
          }
          if (letter>=65&&letter<=90)
          {
@@ -160,6 +167,7 @@ void AtbashSeq(char Input[],char word[]){
             memcpy(subtext,&Input[i],j-i);
             subtext[j-i]='\0';
             //write a function in which you send the string and it returns 1 if its atbash
+            if(((int)subtext[0]>=65&&(int)subtext[0]<=90)||((int)subtext[0]>=97&&(int)subtext[0]<=122)){
             if(checkAtbash(subtext,word)==1){
             if (seqMone==0)
             { 
@@ -169,6 +177,7 @@ void AtbashSeq(char Input[],char word[]){
             }
             seqMone+=1;
             break;
+         }
          }
          }
          if (letter>=65&&letter<=90)
