@@ -24,8 +24,8 @@ int main(){
      AtbashSeq(Text,word);
      printf("\n");
      printf("Anagram Sequences:");
-     printf("\n");
      AnagramSeq(Text,word);
+     printf("\n");
 return 0;
 }
 int checkWave(char input[]){
