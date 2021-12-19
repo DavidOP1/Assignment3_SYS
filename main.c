@@ -6,21 +6,16 @@
 #define Textlen 1024
 int strlength(char s[]);
 int main(){
-    //  char word[Textlen]="bee";
-    //  char Text[Textlen];
-    //  char Input[Textlen]="I’m bringing home my baby bumble bee Won’t my Mommy be so proud of me I’m bringing home my baby bumble bee –OUCH!! It stung me!! vvy y v v~";
       char word[Textlen];
      char Text[Textlen];
      char Input[Textlen];
      //dont forget to free the malloc used 
-     scanf("%s",word);
-     //printf("%s",word);
+     fgets(word,maxWord,stdin);  
      while(Text[strlength(Text)-1]!='~'){
        strcat(Text," ");
-       scanf("%s",Input);
+       fgets(Input,Textlen,stdin);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
        strcat(Text,Input);
      }
-     //printf("text= %s",Text);
      printf("Gematria Sequences: ");
      GematriaSeq(Text,word);
      printf("\n");
