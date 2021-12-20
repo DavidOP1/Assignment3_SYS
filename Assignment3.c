@@ -34,7 +34,7 @@ void AnagramSeq(char Input[],char word[]){
             if(helpAnagram(subtext,word)==1){
             if (seqMone==0)
             { 
-            printf(" %s",subtext);
+            printf("%s",subtext);
             }else{
               printf("~%s",subtext);
             }
@@ -127,7 +127,7 @@ void GematriaSeq(char Input[],char word[]){
             if(((int)subtext[0]>=65&&(int)subtext[0]<=90)||((int)subtext[0]>=97&&(int)subtext[0]<=122)){
             if (seqMone==0)
             { 
-            printf(" %s",subtext);
+            printf("%s",subtext);
             }else{
               printf("~%s",subtext);
             }
@@ -171,7 +171,7 @@ void AtbashSeq(char Input[],char word[]){
             if(checkAtbash(subtext,word)==1){
             if (seqMone==0)
             { 
-            printf(" %s",strrev(subtext));
+            printf("%s",strrev(subtext));
             }else{
               printf("~%s",strrev(subtext));
             }
